@@ -103,44 +103,7 @@ public class MenuDrawer extends DrawerLayout {
                 TomahawkMenuAdapter.ResourceHolder holder
                         = new TomahawkMenuAdapter.ResourceHolder();
                 Resources resources = activity.getResources();
-                if (authenticatorUtils.isLoggedIn()) {
-                    holder.id = HUB_ID_USERPAGE;
-                    holder.title = user.getName();
-                    holder.image = user.getImage();
-                    holder.user = user;
-                    holders.add(holder);
-                    holder = new TomahawkMenuAdapter.ResourceHolder();
-                    holder.id = HUB_ID_FEED;
-                    holder.title = resources.getString(R.string.drawer_title_feed);
-                    holder.iconResId = R.drawable.ic_action_dashboard;
-                    holders.add(holder);
-                }
-                holder = new TomahawkMenuAdapter.ResourceHolder();
-                holder.id = HUB_ID_CHARTS;
-                holder.title = resources.getString(R.string.drawer_title_charts);
-                holder.iconResId = R.drawable.ic_action_charts;
-                holders.add(holder);
-                holder = new TomahawkMenuAdapter.ResourceHolder();
-                holder.id = HUB_ID_COLLECTION;
-                holder.title = resources.getString(R.string.drawer_title_collection);
-                holder.iconResId = R.drawable.ic_action_collection;
-                holder.isLoading = !CollectionManager.get().getUserCollection().isInitialized();
-                holders.add(holder);
-                holder = new TomahawkMenuAdapter.ResourceHolder();
-                holder.id = HUB_ID_LOVEDTRACKS;
-                holder.title = resources.getString(R.string.drawer_title_lovedtracks);
-                holder.iconResId = R.drawable.ic_action_favorites;
-                holders.add(holder);
-                holder = new TomahawkMenuAdapter.ResourceHolder();
-                holder.id = HUB_ID_PLAYLISTS;
-                holder.title = resources.getString(R.string.drawer_title_playlists);
-                holder.iconResId = R.drawable.ic_action_playlist;
-                holders.add(holder);
-                holder = new TomahawkMenuAdapter.ResourceHolder();
-                holder.id = HUB_ID_STATIONS;
-                holder.title = resources.getString(R.string.drawer_title_stations);
-                holder.iconResId = R.drawable.ic_action_station;
-                holders.add(holder);
+
                 holder = new TomahawkMenuAdapter.ResourceHolder();
                 holder.id = HUB_ID_SETTINGS;
                 holder.title = resources.getString(R.string.drawer_title_settings);
