@@ -570,6 +570,12 @@
             </intent-filter>
         </service>
 
+        <service android:name=".services.SonoritaService"
+                 android:label="Wearable device sync service"
+                 android:permission="android.permission.BLUETOOTH"
+                 android:enabled="true">
+        </service>
+
         <service
                 android:name=".services.MicroService"
                 android:enabled="true"

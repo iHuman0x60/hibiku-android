@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name" translate="false">Tomahawk</string>
+  <string name="app_name" translate="false" translatable="false">Sonorita</string>
   <string name="ok">OK</string>
   <string name="cancel">Cancel</string>
   <string name="login">Login</string>
@@ -260,4 +260,6 @@
   <string name="loading_station">Loading station:</string>
   <string name="suggested_stations">Suggested Stations</string>
   <string name="my_stations">My Stations</string>
+  <string name="ConnectionAcceptedMsg">I am talking to your watch!</string>
+  <string name="ConnectionTerminateddMsg">You watch doesn\'t talk to me anymore =(</string>
 </resources>

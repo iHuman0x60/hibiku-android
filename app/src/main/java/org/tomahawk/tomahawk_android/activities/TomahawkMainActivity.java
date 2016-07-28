@@ -554,6 +554,9 @@ public class TomahawkMainActivity extends AppCompatActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
+        // The default tab for this app is Settings
+        //FragmentUtils.replace(this, PreferencePagerFragment.class, null);
+
         // Sync the toggle state after onRestoreInstanceState has occurred.
         if (mDrawerToggle != null) {
             mDrawerToggle.syncState();
