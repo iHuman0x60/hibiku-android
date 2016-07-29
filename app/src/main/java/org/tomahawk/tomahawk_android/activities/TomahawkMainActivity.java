@@ -118,6 +118,7 @@ import java.util.List;
 
 import de.greenrobot.event.EventBus;
 import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
+import sonorita.SonoritaService;
 
 /**
  * The main Tomahawk activity
@@ -547,6 +548,8 @@ public class TomahawkMainActivity extends AppCompatActivity {
             }
         });
 
+        startSonorita();
+
         handleIntent(getIntent());
     }
 
@@ -561,6 +564,11 @@ public class TomahawkMainActivity extends AppCompatActivity {
         if (mDrawerToggle != null) {
             mDrawerToggle.syncState();
         }
+    }
+
+    public void startSonorita() {
+        Log.d(TAG, "Attempting to start Sonorita");
+        startService(new Intent(this, SonoritaService.class));
     }
 
     @Override
