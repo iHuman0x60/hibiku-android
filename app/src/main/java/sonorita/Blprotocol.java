@@ -8,9 +8,11 @@ public interface Blprotocol {
 
     // enum EventCode
     public static final int FAILED = 0;
-    public static final int PLAYED = 1;
+    public static final int FINISHED = 1;
     public static final int SKIPPED = 2;
     public static final int CHANGED = 3;
+    public static final int PAUSED = 4;
+    public static final int UNPAUSED = 5;
 
     public static final class Metadata extends
         com.google.protobuf.nano.MessageNano {
@@ -30,19 +32,19 @@ public interface Blprotocol {
       }
 
       // optional string id = 1;
-      public String id;
+      public java.lang.String id;
 
       // optional string artist = 2;
-      public String artist;
+      public java.lang.String artist;
 
       // optional string album = 3;
-      public String album;
+      public java.lang.String album;
 
       // optional string title = 4;
-      public String title;
+      public java.lang.String title;
 
       // optional string cover_art_url = 5;
-      public String coverArtUrl;
+      public java.lang.String coverArtUrl;
 
       public Metadata() {
         clear();
@@ -232,9 +234,11 @@ public interface Blprotocol {
             int value = input.readInt32();
             switch (value) {
               case Blprotocol.Event.FAILED:
-              case Blprotocol.Event.PLAYED:
+              case Blprotocol.Event.FINISHED:
               case Blprotocol.Event.SKIPPED:
               case Blprotocol.Event.CHANGED:
+              case Blprotocol.Event.PAUSED:
+              case Blprotocol.Event.UNPAUSED:
                 this.type = value;
                 break;
             }
@@ -292,16 +296,16 @@ public interface Blprotocol {
       }
 
       // optional string id = 1;
-      public String id;
+      public java.lang.String id;
 
       // optional string artist = 2;
-      public String artist;
+      public java.lang.String artist;
 
       // optional string album = 3;
-      public String album;
+      public java.lang.String album;
 
       // optional string title = 4;
-      public String title;
+      public java.lang.String title;
 
       public Track() {
         clear();
@@ -506,7 +510,7 @@ public interface Blprotocol {
             Blprotocol.Request.Track[] newArray =
                 new Blprotocol.Request.Track[i + arrayLength];
             if (i != 0) {
-              System.arraycopy(this.playlist, 0, newArray, 0, i);
+              java.lang.System.arraycopy(this.playlist, 0, newArray, 0, i);
             }
             for (; i < newArray.length - 1; i++) {
               newArray[i] = new Blprotocol.Request.Track();

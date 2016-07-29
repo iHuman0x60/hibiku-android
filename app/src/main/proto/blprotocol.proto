@@ -14,9 +14,11 @@ message Event {
 
     enum EventCode {
         FAILED = 0;
-        PLAYED = 1;
+        FINISHED = 1;
         SKIPPED = 2;
         CHANGED = 3;
+        PAUSED = 4;
+        UNPAUSED = 5;
     }
 }
 

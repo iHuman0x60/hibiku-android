@@ -37,6 +37,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
+    <!-- Connect with Samsung Gear -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
     <supports-screens
             android:anyDensity="true"
             android:largeScreens="true"

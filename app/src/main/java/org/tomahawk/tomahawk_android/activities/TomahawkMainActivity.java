@@ -548,7 +548,7 @@ public class TomahawkMainActivity extends AppCompatActivity {
             }
         });
 
-        startSonorita();
+        //startSonorita();
 
         handleIntent(getIntent());
     }
