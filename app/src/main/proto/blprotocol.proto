@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+message Event {
+    EventCode type = 1;
+    Metadata now_playing = 2;
+
+    message Metadata {
+        string id = 1;
+        string artist = 2;
+        string album = 3;
+        string title = 4;
+        string cover_art_url = 5;
+    }
+
+    enum EventCode {
+        FAILED = 0;
+        PLAYED = 1;
+        SKIPPED = 2;
+        CHANGED = 3;
+    }
+}
+
+message Request {
+    RequestCode type = 1;
+    repeated Track playlist = 2;
+
+    message Track {
+        string id = 1;
+        string artist = 2;
+        string album = 3;
+        string title = 4;
+    }
+
+    enum RequestCode {
+        PAUSE = 0;
+        PLAY = 1;
+        SKIP = 2;
+        VOLUME_UP = 3;
+        VOLUME_DOWN = 4;
+        CHANGE_PLAYLIST = 5;
+    }
+}
